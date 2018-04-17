@@ -1,0 +1,43 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+
+int main (void) {
+
+	int i, op;
+	
+	
+	printf ("*****ESCOLHA UMA DAS OPÇÕES*****\n\n\n");
+	printf (" [1] - PARA SORTEAR OS NUMEROS\n ");
+	printf (" [0] - PARA SAIR \n\n");
+	scanf ("%d", &op);
+	system("CLS");
+	
+	switch (op){
+		
+		case 1: 
+	
+	srand (time(NULL));
+	
+	printf ("Gerador de dezenas aleatorias: \n \n");
+	
+	for (i=0; i < 5; i++){
+	
+	// rand = Para gerar um número aleatório (randômico) em linguagem C podemos usar a função rand pertencente à biblioteca stdlib.h.
+	printf (" \t Numero %d: %d\n", i+1, (rand () % 59) +1);
+	
+}		
+
+printf ("\n \n");
+	system ("pause");
+	return 0;
+	break;
+	 	case 0:
+	 		system("CLS");
+	 	printf ("><><><>< ADEUS ><><><><");
+	return 0;
+	break;
+}
+}
+
